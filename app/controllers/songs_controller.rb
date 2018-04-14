@@ -10,7 +10,7 @@ class SongsController < ApplicationController
           s.delete
       end
     end
-    @songs = Song.all(:order => "created_at DESC")
+    @songs = Song.all.order('created_at DESC')
   end
 
   # GET /songs/1
